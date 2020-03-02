@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   );
   member.associate = function(models) {
     // associations can be defined here
-    models.member.belongsTo(models.project);
+    models.member.assoc = models.member.belongsTo(models.project);
   };
   return member;
 };
